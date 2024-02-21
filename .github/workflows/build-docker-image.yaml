@@ -37,4 +37,4 @@ jobs:
       - name: Create Buildx
         run: docker buildx create --name mybuilder --use
       - name: Build  # 修改下面的镜像名称
-        run: docker buildx build --platform linux/arm64,linux/amd64 -t rockchin/python-app:${{ steps.check_version.outputs.version }} -t rockchin/python-app:latest . --push
+        run: docker buildx build --platform linux/arm64,linux/amd64 -t ${{ secrets.DOCKER_USERNAME }}/python-app:${{ steps.check_version.outputs.version }} -t ${{ secrets.DOCKER_USERNAME }}/python-app:latest . --push
