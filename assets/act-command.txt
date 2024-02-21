@@ -1,0 +1,1 @@
+act -j 'publish-docker-image'  -s DOCKER_USERNAME=... -s DOCKER_PASSWORD=... --container-architecture linux/amd64
